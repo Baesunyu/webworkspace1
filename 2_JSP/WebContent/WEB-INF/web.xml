@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <!--
+  	* web_xml 파일
+  	- 배포서술자(DD, Deployment Descriptor) 라고 해서 해당 웹 애플리케이션의 기본적인 설정을 위해 작성하는 파일
+  	- 웹 애플리케이션(프로젝트)을 구동시키는 서버 start시 제일 먼저 읽혀지는 파일
+  	- 개발자가 web.xml을 수정하지 않아도 개발 및 운영이 가능하지만 웹애플리케이션의 규모가 커지게 되면
+  	  직접 수정해야할 경우가 생길것.
+  	  직접 수정 가능한 객체들 => Servlet, Filter, Wrapper, ... 
+    -->
+  <display-name>2_JSP</display-name>
+  <!--
+  	* welcome-file-list : 처음에 url로 이 애플리케이션 루트로 요청시 제일먼저 보여지게되는 메인페이지를 
+  	지정해놓은것
+  	http://localhost:8081/jsp
+  	=> 각자 본인컴퓨터에 구출해놓은 서버의 ip주소를 요청 localhost(루프백아이피) == 127.0.0.1
+  	=> 서버의 포트번호 : 설정해 놓은 포트번호 8081
+  	=> 서버내에 구동중인 context root 지정 : 2_JSP
+  	=> 단, 해당파일은 webContent 폴더안에 위치해야만 찾을 수 있다. (수정ver)=> 2_jap안에 WebContent폴더가 최상위 디렉토리로 자동 설정됨.
+  	=> http://localhost:8081/2_JSP/index.html
+  
+    -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/views/error500.jsp</location>
+  
+  </error-page>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/views/error404.jsp</location>
+  </error-page>
+  
+</web-app>

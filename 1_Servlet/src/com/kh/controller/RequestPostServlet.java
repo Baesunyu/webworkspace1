@@ -60,7 +60,7 @@ public class RequestPostServlet extends HttpServlet {
 		
 		// 단, 그 응답화면(jsp)에서 필요로 하는 데이터들은 request객체에 담아서 전달해줘야한다.
 		// => request의 attribute라는 영역에 데이터 담아서 전달해주기(키 - 밸류 세트로)
-		// request.setAttribute("키", "밸류");
+		// request.setAttribute("키", 밸류ㄴ);
 		request.setAttribute("name", name);
 		request.setAttribute("age",age);
 		request.setAttribute("gender",gender);

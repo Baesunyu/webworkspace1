@@ -21,7 +21,7 @@
 		=> 즉, 로그인이나 회원가입 같은 경우 GET방식이 부적합 함<br><br>
 		
 		특징2. Header영역은 전송하는 길이에 제한이 있음<br>
-		-=> 방대한 데이터를 담았을 경우 초과된 데이터를 절단되서 넘어감<br>
+		=> 방대한 데이터를 담았을 경우 초과된 데이터를 절단되서 넘어감<br>
 		=> 게시판 작성같은 경우 get방식이 부적합 함<br><br>
 		
 		특징3. 장점이라고 한다면 URL에 데이터가 노출되기 때문에 즐겨찾기가 가능
@@ -41,9 +41,10 @@
 		절대경로방식(/로 시작되는 경우) : localhost:8081 뒤에 action에 작성한 값이 그대로 붙여지면서 요청이 들어간다.
 		상대경로방식(문구로 시작되는 경우) : 현재 페이지가 보여질때의 url경로중 마지막위치의 / 로부터 그 뒤에 action에 작성한
 									값이 이어붙여지면서 요청이 들어간다.
-		 --> 
+		<!-- 절대경로방식 [form action="/servlet/test.do" http://localhost:8081/servlet/test.do?name=%EB%B0%B0-->
+		<!-- 상대경로방식 [form action="servlet/test.do"] http://localhost:8081/servlet/views/servlet/test.do?name=%EB% -->
 		 
-		 <form action="/servlet/test.do" method = "get"> <!-- 절대경로는 http://localhost:8081/servlet/test.do?name=333 -->
+		 <form action="/servlet/test.do" method = "get"> 
 		 	<ul>
 		 		<li>
 		 			이름 : <input type="text" name="name">
@@ -83,20 +84,7 @@
 		 
 		 </form>
 		 
-		 <!-- 
-		 <form action="/servlet/test.do" method = "get"> 
-		 	<ul>
-		 		<li>
-		 			이름 : <input type="text" name="name">
-		 		</li>
-		 		<li>
-		 			<input type="submit">
-		 		</li>
-		 	</ul>
-		 
-		 </form>
-		  -->
-		 
+
 		 
 </body>
 </html>

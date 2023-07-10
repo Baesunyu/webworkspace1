@@ -33,8 +33,8 @@ public class RequestGetServlet extends HttpServlet {
 		/*
 		 *  Get 방식으로 요청했다면 해당 doGet메소드가 호출됨.
 		 *  
-		 *  첫번째 매개변수인 httpServletRequest request에는 요청 시 전달된 내용들이 담김(사용자가 입력한값,
-		 *  요청 전송방식, 요청한 사용자의 ip 등등
+		 *  첫번째 매개변수인 httpServletRequest request에는 요청 시 전달된 내용들이 담김(사용자가 입력한 값,
+		 *  요청 전송방식, 요청한 사용자의 ip 등등)
 		 *  
 		 *  두번째 매개변수인 HttpServleResponse response에는 요청 처리 후 응답을 할 때 사용하는 객체
 		 *  
